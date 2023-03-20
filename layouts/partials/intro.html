@@ -1,0 +1,16 @@
+{{ if .Params.intro.enabled | default .Site.Params.intro.enabled | default false }}
+<section id="intro" class="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">{{ .Params.intro.title | default .Site.Params.intro.title | default "Intro" }}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>{{ .Params.intro.text | default .Site.Params.intro.text }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

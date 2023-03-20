@@ -1,0 +1,14 @@
+<section class="hero">
+    <section class="navigation">
+        {{ partial "header.html" . }}
+    </section>
+    <div class="logo-container">
+            <div class="row">
+                <img src="{{ .Site.Params.logo.image }}" alt="logo-image">
+            </div>
+            <div class="row">
+                <a href="#rsvp"
+                   class="btn btn-accent btn-large rsvp-btn">{{ .Site.Params.hero.nav.rsvpButton }}</a>
+            </div>
+    </div>
+</section>

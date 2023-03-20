@@ -1,0 +1,19 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="/js/ouical.js"></script>
+{{ $js := resources.Get "js/scripts.js" | resources.Minify }}
+
+<script src="{{ $js.Permalink }}"></script>
+
+{{ if .Params.map.enabled | default .Site.Params.map.enabled  | default false }}
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.map.apiKey }}&callback=initMap"></script>
+{{ end }}
+
+{{ if .Params.rsvp.enabled | default .Site.Params.map.enabled | default false}}
+<script async defer src="https://www.google.com/recaptcha/api.js?render=RECAPTCHA"></script> // TODO: use template
+{{ end }}

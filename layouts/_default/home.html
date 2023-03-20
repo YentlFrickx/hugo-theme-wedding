@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ if .Site.Params.homePage.bigBanner | default false }}
+{{ partial "hero-fh.html" . }}
+{{ else }}
+{{ partial "hero.html" . }}
+{{ partial "invitation.html" . }}
+{{ partial "intro.html" . }}
+{{ partial "events.html" . }}
+{{ partial "map.html" . }}
+{{ partial "rsvp.html" . }}
+{{- partial "footer.html" . -}}
+{{ end }}
+{{ end }}

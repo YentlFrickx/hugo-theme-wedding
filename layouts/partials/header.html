@@ -1,0 +1,31 @@
+<header>
+    <div class="header-content">
+        <div class="logo"><a href="#"><img src="{{ .Site.Params.hero.nav.logo.image }}" alt="Logo"></a></div>
+        <div class="header-nav">
+            <div class="nav-close">
+                <a class="nav-toggle"><i class="fa-regular fa-x"></i></a>
+            </div>
+            <nav>
+                <ul class="primary-nav">
+                    {{ if .Params.intro.enabled | default .Site.Params.intro.enabled | default false }}
+                    <li><a href="#intro">{{ .Site.Params.hero.nav.introButton }}</a></li>
+                    {{ end }}
+                    {{ if .Params.events.enabled | default .Site.Params.events.enabled | default false }}
+                    <li><a href="#events">{{ .Site.Params.hero.nav.eventsButton }}</a></li>
+                    {{ end }}
+                </ul>
+                <ul class="member-actions">
+                    {{ if .Params.map.enabled | default .Site.Params.map.enabled | default false }}
+                    <li><a href="#map" class="login">{{ .Site.Params.hero.nav.mapButton }}</a></li>
+                    {{ end }}
+                    {{ if .Params.rsvp.enabled | default .Site.Params.rsvp.enabled | default false }}
+                    <li><a href="#rsvp" class="btn btn-white btn-small">{{ .Site.Params.hero.nav.rsvpButton }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </div>
+        <div class="navicon nav-open">
+            <a class="nav-toggle active"><i class="fa-solid fa-bars"></i></a>
+        </div>
+    </div>
+</header>

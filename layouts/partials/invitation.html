@@ -1,0 +1,10 @@
+{{ if .Params.invitation.enabled | default .Site.Params.invitation.enabled | default false }}
+<section id="invitation" class="section-padding">
+    <div class="container">
+        <div class="row text-center">
+            <h3>{{ .Params.invitation.title | default .Site.Params.invitation.title }}</h3>
+            <p>{{ .Params.invitation.text | default .Site.Params.invitation.text }}</p>
+        </div>
+    </div>
+</section>
+{{ end }}

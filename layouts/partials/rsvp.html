@@ -1,0 +1,77 @@
+{{ if .Params.rsvp.enabled | default .Site.Params.rsvp.enabled | default false }}
+<section class="rsvp text-center" id="rsvp">
+
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>{{ .Params.rsvp.modal.title | default .Site.Params.rsvp.modal.title }}</h3>
+                        <p>{{ .Params.rsvp.modal.text | default .Site.Params.rsvp.modal.text }}</p>
+                        <div id="add-to-cal"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h3>{{ .Params.rsvp.title | default .Site.Params.rsvp.title }}</h3>
+                <p>{{ .Params.rsvp.text | default .Site.Params.rsvp.text }}</p>
+                <form id="rsvp-form" class="rsvp-form"
+                      action=""
+                      method="POST">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                 placeholder="{{ .Params.rsvp.placeholders.name | default .Site.Params.rsvp.placeholders.name }}"
+                                                                 required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                     placeholder="{{ .Params.rsvp.placeholders.email | default .Site.Params.rsvp.placeholders.email }}"
+                                                                     required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
+                                                                  max="4"
+                                                                  placeholder="{{ .Params.rsvp.placeholders.extras | default .Site.Params.rsvp.placeholders.extras }}"
+                                                                  required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="hidden" name="event"
+                                   id="event" value="{{ .Params.rsvp.eventType | default .Site.Params.rsvp.eventType }}" >
+                            <div class="form-input-group">
+                                <i class="fa fa-comment"></i><input name="remark" class=""
+                                                                    placeholder="{{ .Params.rsvp.placeholders.remarks | default .Site.Params.rsvp.placeholders.remarks }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="alert-wrapper"></div>
+                    </div>
+                    <button class="btn-fill rsvp-btn">
+                        {{ .Params.rsvp.button | default .Site.Params.rsvp.button }}
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
