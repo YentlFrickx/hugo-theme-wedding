@@ -161,20 +161,20 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Example", // TODO: use template
+            title: "Trouw Annelies en Yentl",
 
             // Event start date
-            start: new Date('Jun 08, 2020 10:00'), // TODO: use template
+            start: new Date('Jun 08, 2024 10:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Jun 09, 2020 00:00'), // TODO: use template
+            end: new Date('Jun 09, 2024 00:00'),
 
             // Event Address
-            address: 'Address' // TODO: use template
+            address: 'Salons De Groene Jager, Bredabaan 889, 2930 Brasschaat, Belgium'
 
             // Event Description
             // description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
@@ -193,11 +193,11 @@ $(document).ready(function () {
             dataObj[dataArray[i].name] = dataArray[i].value
         }
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.')); // TODO: use template
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
         grecaptcha.ready(function() { // Wait for the recaptcha to be ready
             grecaptcha
-                .execute("RECAPTCHA", { // TODO: use template
+                .execute("6LcK88IkAAAAAJ1NsOqxot9q1yflYjHdYc-l8OLd", {
                     action: "submit"
                 }) // Execute the recaptcha
                 .then(function(token){
@@ -216,7 +216,7 @@ $(document).ready(function () {
                         },
                         processData: false,
                         type: 'POST',
-                        url: 'url' // TODO: use template
+                        url: 'https://script.google.com/macros/s/AKfycbyGeqmDrni-dAI5hBlyjr_dA1E-P5YT3U1l_7qaLihc-Y8Ao4dQISXlXN3FWC1gVtef/exec'
                     });
                 })
         })

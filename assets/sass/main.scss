@@ -68,10 +68,6 @@ Hero
   flex-direction: column;
   background-position-x: 50%;
 
-  @media screen and (min-width: 900px) {
-    max-height: 650px;
-  }
-
   &.full-height {
     height: 100vh;
     max-height: 100vh;
