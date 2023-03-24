@@ -1,0 +1,80 @@
+baseURL: 'https://yentlfrickx.github.io/hugo-theme-wedding/'
+languageCode: en
+title: Wedding test
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+disableHugoGeneratorInject: true
+theme: hugo-theme-wedding
+
+params:
+  fontawesomeId: 7db72344ba
+  favicon: /hugo-theme-wedding-example/images/logo-black.png
+  disableIndex: true
+  homePage:
+    bigBanner: true
+  logo:
+    image: /hugo-theme-wedding-example/images/logo-white-big-cropped.png
+  hero:
+    nav:
+      introButton: Intro
+      eventsButton: Planning
+      mapButton: Location
+      rsvpButton: RSVP
+      logo:
+        image: /hugo-theme-wedding-example/images/logo-white.png
+    image: /hugo-theme-wedding-example/images/hero-min.jpg
+  invitation:
+    enabled: true
+    title: This is an example
+    text: Some intro text to introduce this website
+  intro:
+    enabled: true
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet non curabitur gravida arcu ac tortor dignissim convallis. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Vitae congue mauris rhoncus aenean vel elit. In nibh mauris cursus mattis molestie a iaculis. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Integer enim neque volutpat ac tincidunt vitae semper. Adipiscing commodo elit at imperdiet dui accumsan sit amet nulla. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo. Dictum at tempor commodo ullamcorper a lacus. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Non enim praesent elementum facilisis leo vel fringilla est. Egestas maecenas pharetra convallis posuere morbi leo urna. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Nisl condimentum id venenatis a condimentum. Sapien faucibus et molestie ac feugiat sed. Arcu risus quis varius quam quisque.
+  events:
+    enabled: true
+    title: Planning
+    dresscode:
+      title: Ugh... dress code?
+      name: Cocktail
+      text: Explaining the dress code.
+      button: Dress code
+    columns:
+      - items:
+          - title: "Ceremony "
+            time: 13:00 - 14:30
+            text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet non curabitur gravida arcu ac tortor dignissim convallis. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Vitae congue mauris rhoncus aenean vel elit. In nibh mauris cursus mattis molestie a iaculis. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Integer enim neque volutpat ac tincidunt vitae semper. Adipiscing commodo elit at imperdiet dui accumsan sit amet nulla. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo. Dictum at tempor commodo ullamcorper a lacus. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Non enim praesent elementum facilisis leo vel fringilla est. Egestas maecenas pharetra convallis posuere morbi leo urna. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Nisl condimentum id venenatis a condimentum. Sapien faucibus et molestie ac feugiat sed. Arcu risus quis varius quam quisque.
+          - title: "Reception "
+            time: 15:00 - 16:00
+            text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet non curabitur gravida arcu ac tortor dignissim convallis. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Vitae congue mauris rhoncus aenean vel elit. In nibh mauris cursus mattis molestie a iaculis. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Integer enim neque volutpat ac tincidunt vitae semper. Adipiscing commodo elit at imperdiet dui accumsan sit amet nulla. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo. Dictum at tempor commodo ullamcorper a lacus. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Non enim praesent elementum facilisis leo vel fringilla est. Egestas maecenas pharetra convallis posuere morbi leo urna. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Nisl condimentum id venenatis a condimentum. Sapien faucibus et molestie ac feugiat sed. Arcu risus quis varius quam quisque.
+      - items:
+          - title: "Dinner "
+            time: 16:00 - 20:00
+            text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet non curabitur gravida arcu ac tortor dignissim convallis. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Vitae congue mauris rhoncus aenean vel elit. In nibh mauris cursus mattis molestie a iaculis. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Integer enim neque volutpat ac tincidunt vitae semper. Adipiscing commodo elit at imperdiet dui accumsan sit amet nulla. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo. Dictum at tempor commodo ullamcorper a lacus. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Non enim praesent elementum facilisis leo vel fringilla est. Egestas maecenas pharetra convallis posuere morbi leo urna. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Nisl condimentum id venenatis a condimentum. Sapien faucibus et molestie ac feugiat sed. Arcu risus quis varius quam quisque.
+          - title: "Party "
+            time: 20:00 - 02:00
+            text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet non curabitur gravida arcu ac tortor dignissim convallis. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Vitae congue mauris rhoncus aenean vel elit. In nibh mauris cursus mattis molestie a iaculis. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Integer enim neque volutpat ac tincidunt vitae semper. Adipiscing commodo elit at imperdiet dui accumsan sit amet nulla. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo. Dictum at tempor commodo ullamcorper a lacus. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Non enim praesent elementum facilisis leo vel fringilla est. Egestas maecenas pharetra convallis posuere morbi leo urna. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Nisl condimentum id venenatis a condimentum. Sapien faucibus et molestie ac feugiat sed. Arcu risus quis varius quam quisque.
+  map:
+    enabled: true
+    apiKey: AIzaSyBj6MX5KLorpsvroAhEcGurPm2i1dt6wHo
+    title: How do I get there?
+    text: Easy!
+    infoButton: Info
+    mapButton: Map
+    location:
+      title: Test location
+      address: test address
+  rsvp:
+    enabled: true
+    recaptcha: true
+    title: What are you waiting for?
+    text: Some extra text
+    modal:
+      title: Thanks!
+      text: Thank you message
+    placeholders:
+      name: Name
+      email: Email
+      extras: Partner/kids
+      remarks: Remarks
+    button: Confirm!
