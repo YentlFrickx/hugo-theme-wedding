@@ -4,9 +4,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider-min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="/js/ouical.js"></script>
+{{ $ouicaljs := resources.Get "js/ouical.js" | resources.Minify }}
 {{ $js := resources.Get "js/scripts.js" | resources.Minify }}
 
+<script src="{{ $ouicaljs.Permalink }}"></script>
 <script src="{{ $js.Permalink }}"></script>
 
 {{ if .Params.map.enabled | default .Site.Params.map.enabled  | default false }}
@@ -14,6 +15,6 @@
         src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.map.apiKey }}&callback=initMap"></script>
 {{ end }}
 
-{{ if .Params.rsvp.enabled | default .Site.Params.map.enabled | default false}}
-<script async defer src="https://www.google.com/recaptcha/api.js?render=6LcK88IkAAAAAJ1NsOqxot9q1yflYjHdYc-l8OLd"></script>
+{{ if and (.Params.rsvp.enabled | default .Site.Params.rsvp.enabled | default false) ( .Site.Params.rsvp.recaptcha.enabled | default false) }}
+<script async defer src="https://www.google.com/recaptcha/api.js?render={{ .Site.Params.rsvp.recaptcha.id }}"></script>
 {{ end }}

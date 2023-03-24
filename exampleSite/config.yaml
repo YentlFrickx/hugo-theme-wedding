@@ -9,12 +9,12 @@ theme: hugo-theme-wedding
 
 params:
   fontawesomeId: 7db72344ba
-  favicon: /hugo-theme-wedding-example/images/logo-black.png
+  favicon: /hugo-theme-wedding/images/logo-black.png
   disableIndex: true
   homePage:
     bigBanner: true
   logo:
-    image: /hugo-theme-wedding-example/images/logo-white-big-cropped.png
+    image: /hugo-theme-wedding/images/logo-white-big-cropped.png
   hero:
     nav:
       introButton: Intro
@@ -22,8 +22,8 @@ params:
       mapButton: Location
       rsvpButton: RSVP
       logo:
-        image: /hugo-theme-wedding-example/images/logo-white.png
-    image: /hugo-theme-wedding-example/images/hero-min.jpg
+        image: /hugo-theme-wedding/images/logo-white.png
+    image: /hugo-theme-wedding/images/hero-min.jpg
   invitation:
     enabled: true
     title: This is an example
@@ -56,7 +56,7 @@ params:
             text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet non curabitur gravida arcu ac tortor dignissim convallis. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Vitae congue mauris rhoncus aenean vel elit. In nibh mauris cursus mattis molestie a iaculis. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Integer enim neque volutpat ac tincidunt vitae semper. Adipiscing commodo elit at imperdiet dui accumsan sit amet nulla. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo. Dictum at tempor commodo ullamcorper a lacus. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Non enim praesent elementum facilisis leo vel fringilla est. Egestas maecenas pharetra convallis posuere morbi leo urna. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Nisl condimentum id venenatis a condimentum. Sapien faucibus et molestie ac feugiat sed. Arcu risus quis varius quam quisque.
   map:
     enabled: true
-    apiKey: AIzaSyBj6MX5KLorpsvroAhEcGurPm2i1dt6wHo
+    apiKey: AIzaSyCVK4_jn6NzimI5WfEu1NPWOi_15eoZatw
     title: How do I get there?
     text: Easy!
     infoButton: Info
@@ -66,7 +66,13 @@ params:
       address: test address
   rsvp:
     enabled: true
-    recaptcha: true
+    postUrl: "example.com"
+    recaptcha:
+      enabled: false
+      id: "id"
+    alert:
+      title: "Just a moment!"
+      text: "We are sending your details"
     title: What are you waiting for?
     text: Some extra text
     modal:
@@ -78,3 +84,8 @@ params:
       extras: Partner/kids
       remarks: Remarks
     button: Confirm!
+    calendarInvite:
+      title: "Wedding"
+      startDate: "Jun 08, 2022 10:00"
+      endDate: "Jun 09, 2022 00:00"
+      address: "Leuven, Belgium"

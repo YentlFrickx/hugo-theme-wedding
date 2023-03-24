@@ -161,20 +161,20 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Trouw Annelies en Yentl",
+            title: digitalData.calendar.title,
 
             // Event start date
-            start: new Date('Jun 08, 2024 10:00'),
+            start: new Date(digitalData.calendar.startDate),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Jun 09, 2024 00:00'),
+            end: new Date(digitalData.calendar.endDate),
 
             // Event Address
-            address: 'Salons De Groene Jager, Bredabaan 889, 2930 Brasschaat, Belgium'
+            address: digitalData.calendar.address
 
             // Event Description
             // description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
@@ -193,11 +193,11 @@ $(document).ready(function () {
             dataObj[dataArray[i].name] = dataArray[i].value
         }
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>' + digitalData.rsvp.alertTitle +'</strong>' + digitalData.rsvp.alertText));
 
         grecaptcha.ready(function() { // Wait for the recaptcha to be ready
             grecaptcha
-                .execute("6LcK88IkAAAAAJ1NsOqxot9q1yflYjHdYc-l8OLd", {
+                .execute(digitalData.rsvp.recaptchaId, {
                     action: "submit"
                 }) // Execute the recaptcha
                 .then(function(token){
@@ -216,7 +216,7 @@ $(document).ready(function () {
                         },
                         processData: false,
                         type: 'POST',
-                        url: 'https://script.google.com/macros/s/AKfycbyGeqmDrni-dAI5hBlyjr_dA1E-P5YT3U1l_7qaLihc-Y8Ao4dQISXlXN3FWC1gVtef/exec'
+                        url: digitalData.rsvp.postUrl
                     });
                 })
         })
