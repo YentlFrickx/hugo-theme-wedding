@@ -22,7 +22,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v1
         name: 'Upload artifact'
         with:
-          path: './public'
+          path: './exampleSite/public'
   deploy:
     permissions:
       pages: write
